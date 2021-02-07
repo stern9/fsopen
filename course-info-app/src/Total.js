@@ -1,6 +1,7 @@
 import React from "react";
 
 function Total(props) {
+  console.log(props);
   return (
     <div>
       <p>
