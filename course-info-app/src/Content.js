@@ -2,6 +2,7 @@ import React from "react";
 import Part from "./Part";
 
 function Content(props) {
+  console.log(props);
   return (
     <div>
       <Part part={props.parts[0].name} exercises={props.parts[0].exercises} />
