@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import Header from "./Header";
 import Button from "./Button";
 import Statistics from "./Statistics";
@@ -15,7 +14,7 @@ const App = () => {
   const increaseBad = () => setBad(bad + 1);
 
   return (
-    <div className="App">
+    <div>
       <Header />
       <Button handleClick={increaseGood} text="good" />
       <Button handleClick={increaseNeutral} text="neutral" />
