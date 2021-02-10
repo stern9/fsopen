@@ -5,6 +5,15 @@ function Statistics({ good, neutral, bad }) {
   const averageScore = (good * 1 + neutral * 0 + bad * -1) / addAll;
   const positivePercentage = (good / addAll) * 100;
 
+  if (addAll === 0) {
+    return (
+      <div>
+        <h1>Statistics</h1>
+        <div>No feedback given</div>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div>
