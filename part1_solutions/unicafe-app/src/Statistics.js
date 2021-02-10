@@ -1,9 +1,10 @@
 import React from "react";
+import Statistic from "./Statistic";
 
-function Statistics({ good, neutral, bad }) {
+const Statistics = ({ good, neutral, bad }) => {
   const addAll = good + neutral + bad;
   const averageScore = (good * 1 + neutral * 0 + bad * -1) / addAll;
-  const positivePercentage = (good / addAll) * 100;
+  const positivePercentage = (good / addAll) * 100 + "%";
 
   if (addAll === 0) {
     return (
@@ -16,17 +17,15 @@ function Statistics({ good, neutral, bad }) {
 
   return (
     <div>
-      <div>
-        <h1>Statistics</h1>
-      </div>
-      <div>good: {good}</div>
-      <div>neutral: {neutral}</div>
-      <div>bad: {bad}</div>
-      <div>all: {addAll}</div>
-      <div>average: {averageScore}</div>
-      <div>positive: {positivePercentage} %</div>
+      <h1>Statistics</h1>
+      <Statistic text="good:" value={good} />
+      <Statistic text="neutral:" value={neutral} />
+      <Statistic text="bad:" value={bad} />
+      <Statistic text="all:" value={addAll} />
+      <Statistic text="average:" value={averageScore} />
+      <Statistic text="positive:" value={positivePercentage} />
     </div>
   );
-}
+};
 
 export default Statistics;
