@@ -14,8 +14,10 @@ const App = (props) => {
 
   const [selected, setSelected] = useState(0);
   const randomNumber = () => {
-    setSelected(selected + 1);
+    setSelected(Math.floor(Math.random() * anecdotes.length));
   };
+
+  // console.log(selected);
 
   return (
     <div>
