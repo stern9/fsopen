@@ -1,13 +1,9 @@
 import React from "react";
 
-const Part = (props) => {
-  return (
-    <div>
-      <p>
-        {props.name} {props.exercise}
-      </p>
-    </div>
-  );
-};
+const Part = ({ part, exercises }) => (
+  <p>
+    {part} {exercises}
+  </p>
+);
 
 export default Part;

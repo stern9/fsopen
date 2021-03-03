@@ -1,17 +1,12 @@
 import React from "react";
 import Part from "./Part";
-import Total from "./Total";
 
-const Content = ({ parts }) => {
-  return (
-    <div>
-      {parts.map((part) => (
-        <Part key={part.id} name={part.name} exercise={part.exercises} />
-      ))}
-      <Total sumExercises={parts} />
-      {console.log(parts)}
-    </div>
-  );
-};
+const Content = ({ parts }) => (
+  <div>
+    {parts.map((part, i) => (
+      <Part key={i} part={part.name} exercises={part.exercises} />
+    ))}
+  </div>
+);
 
 export default Content;

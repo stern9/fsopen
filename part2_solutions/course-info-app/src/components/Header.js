@@ -1,11 +1,5 @@
 import React from "react";
 
-function Header(props) {
-  return (
-    <div>
-      <h1>{props.course}</h1>
-    </div>
-  );
-}
+const Header = ({ course }) => <h2>{course}</h2>;
 
 export default Header;

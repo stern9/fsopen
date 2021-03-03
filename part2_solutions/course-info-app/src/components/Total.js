@@ -1,18 +1,12 @@
 import React from "react";
 
-const Total = ({ sumExercises }) => {
-  let totalAmount = sumExercises.reduce((sum, element) => {
-    return sum + element.exercises;
-  }, 0);
-  // 2.2: Course information step7 and 2.3*: Course information step8
-  // are the same, had already used reducer
+const Total = ({ parts }) => {
+  const total = parts.reduce((sum, part) => sum + part.exercises, 0);
 
   return (
-    <div>
-      <p>
-        <b>Total of {totalAmount} exercises </b>
-      </p>
-    </div>
+    <p>
+      <b>total of exercises {total}</b>
+    </p>
   );
 };
 
