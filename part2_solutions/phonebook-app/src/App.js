@@ -10,7 +10,15 @@ const App = () => {
       name: newName,
     };
     console.log(personObject);
+
+    const allNames = persons.map((person) => person.name);
+    if (allNames.includes(newName)) {
+      alert(`${newName} is already added`);
+      return;
+    }
+
     setPersons(persons.concat(personObject));
+    setNewName("");
   };
 
   const handleNameChange = (event) => {
@@ -33,7 +41,7 @@ const App = () => {
         </div>
       </form>
       <h2>Numbers</h2>
-      <>{rowNames()}</>
+      {rowNames()}
     </div>
   );
 };
